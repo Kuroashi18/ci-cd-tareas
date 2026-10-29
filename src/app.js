@@ -16,4 +16,15 @@ app.get('/api/tareas', (req, res) => {
     ]);
 });
 
+app.get('/health', (req, res) => {
+    res.json({ status: 'ok' });
+});
+
+// . (la ruta /api / tareas queda igual)
+
+app.get('/api/saludo', (req, res) => {
+    res.json({ mensaje: 'Hola desde el pipeline de CI/CD' });
+});
+
+
 module.exports = app;
